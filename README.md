@@ -4,6 +4,11 @@ A responsive weather application that shows current weather, temperature, humidi
 
 ---
 
+## 📸 Screenshot
+
+![Calculator Screenshot](https://i.postimg.cc/jdxJ3Rg4/Screenshot-2025-11-16-201915-(1).png)
+---
+
 ## 🌟 Features
 - 🌤 Display current weather conditions
 - 🌡 Show temperature in Celsius/Fahrenheit
