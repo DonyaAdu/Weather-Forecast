@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    overflow: hidden;
+}
+.box {
+    width: 250px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover {
+    transition: 0.7s;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+input, select, button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #0077ff;
+}
+button {
+    width: 95%;
+    border: none;
+    background: #0077ff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+    background: #005ecc;
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+#result {
+    margin-top: 15px;
+}
+.day {
+    position: relative;
+    background: rgba(0,0,0,0.03);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 4px solid #0077ff;
+    overflow: hidden;
+}
+.day:hover {
+    transform: translateX(5px);
+    background: rgba(0,0,0,0.05);
+    transition: 0.7s;
+}
+.sun {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ffec99 0%, #ffd700 60%, #ffdd00 100%);
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    animation: rotateSun 5s linear infinite;
+    z-index: 0;
+}
+@keyframes rotateSun {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+.cloud {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50%;
+    top: 5px;
+    right: -20px;
+    animation: cloudMove 8s linear infinite alternate;
+}
+@keyframes cloudMove {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-20px);}
+}
+.rain-drop {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #00f;
+    animation: fall 1s linear infinite;
+}
+@keyframes fall {
+    0% {top: -10px; opacity:0;}
+    50% {opacity:1;}
+    100% {top:100%; opacity:0;}
+}
+.snowflake {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    animation: snowFall linear infinite;
+}
+@keyframes snowFall {
+    0% {top:-10px;}
+    100% {top:100%;}
+}

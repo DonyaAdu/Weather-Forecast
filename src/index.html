@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="box">
+    <input id="city" placeholder="City Name">
+    <select id="days">
+        <option value="1">1 Day</option>
+        <option value="2">2 Days</option>
+        <option value="3" selected>3 Days</option>
+        <option value="4">4 Days</option>
+        <option value="5">5 Days</option>
+    </select>
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="result"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
